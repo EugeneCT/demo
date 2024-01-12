@@ -3,7 +3,6 @@ import numpy as np
 from datetime import datetime, timedelta
 import copy
 import tqdm
-tqdm.pandas()
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
