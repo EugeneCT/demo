@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 import copy
-from tqdm import tqdm
+import tqdm
 tqdm.pandas()
 import streamlit as st
 import matplotlib.pyplot as plt
