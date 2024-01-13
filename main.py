@@ -19,13 +19,21 @@ lean=master[['distance','fare_amount','fare/km','passenger_count','cluster','pic
 
 st.write("Welcome")
 
+genre = st.radio(
+    "What's your favorite movie genre",
+    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
+    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
 
-fig, ax = plt.subplots(2,1)
-fig.set_size_inches(30,30)
-sns.heatmap(lean.corr(),vmin = -1, vmax = +1,annot = True, cmap = 'coolwarm',ax=ax[0])
-sns.heatmap(lean.cov(),vmin = -1, vmax = +1,annot = True, cmap = 'coolwarm',ax=ax[1])
+if genre == ':rainbow[Comedy]':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn\'t select comedy.")
+# fig, ax = plt.subplots(2,1)
+# fig.set_size_inches(30,30)
+# sns.heatmap(lean.corr(),vmin = -1, vmax = +1,annot = True, cmap = 'coolwarm',ax=ax[0])
+# sns.heatmap(lean.cov(),vmin = -1, vmax = +1,annot = True, cmap = 'coolwarm',ax=ax[1])
 
-st.write(fig)
+# st.write(fig)
 
 """ Plotly map """
 # color_scale = [(0, 'orange'), (1,'red')]
